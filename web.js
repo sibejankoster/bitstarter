@@ -8,7 +8,7 @@ var index = "Hello world";
 
 
 app.get('/', function(request, response) {
-  response.send('Hello World!');
+  response.send(index);
 });
 
 var port = process.env.PORT || 5000;
