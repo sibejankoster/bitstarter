@@ -1,17 +1,20 @@
 var express = require('express');
+var app = express();
+app.use(express.logger() );
+
 var fs = require ('fs'), index;
 
-//fs.readFile("./index.html", function (err, data) {
-//  if (err)  {
-//     throw err;
-//  }
-//  index=data;
-//)};
+fs.readFile("/index.html", function (err, data) {
+  if (err)  {
+     throw err;
+  }
+  index=data;
+)};
  
 
 var app = express.createServer(express.logger());
 
-app.get('index.html', function(request, response) {
+app.get('/index.html', function(request, response) {
   response.send("dit werkt wel");
   }
 );
