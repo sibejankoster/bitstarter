@@ -2,7 +2,7 @@ var express = require('express');
 var fs = require ('fs');
 
 var app = express.createServer(express.logger());
-var index;
+var index = "Hello world";
 
 //index = readFileSync('./index.html', 'utf8');
 
