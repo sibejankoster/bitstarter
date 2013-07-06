@@ -1,6 +1,14 @@
 var express = require('express');
+var fs = require ('fs');
 
 var app = express.createServer(express.logger());
+
+frs.readFile('/index.html', function (err, data) {
+  if (err) {
+     throw err;
+   }
+   index=data;
+});
 
 app.get('/', function(request, response) {
   response.send('Hello World!');
