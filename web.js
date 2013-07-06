@@ -11,7 +11,7 @@ var fs = require ('fs'), index;
 
 var app = express.createServer(express.logger());
 
-app.get('./index.html', function(request, response) {
+app.get('index.html', function(request, response) {
   response.send("dit werkt wel");
   }
 );
