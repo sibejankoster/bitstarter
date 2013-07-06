@@ -11,9 +11,10 @@ fs.readFile("./index.html", function (err, data) {
 
 var app = express.createServer(express.logger());
 
-app.get('/', function(request, response) {
-  response.send(index);
-});
+app.get('/index.html', function(request, response) {
+  response.send("dit werkt wel");
+  }
+);
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
